@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+    <link rel="stylesheet" href="css/css_reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="images/makandologo.png" alt="Logo">
+        <nav>
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" />
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="history.html">Order History</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+
+    <section id="main">
+        <form action="submitorder.php" method="post">
+            <h1>Hi Dawson Doh, please order from the items below:</h1>
+            <div class="grid-container">
+                <div class="col snacks">
+                    <h1>Snacks</h1>
+                    <div class="fooditem">
+                        <table>
+                            <tr>
+                                <td><img src="images/salad.jpg" alt="House Salad Photo"></td>
+                                <td>
+                                    <span class="itemname">House Salad</span><br>
+                                    $<span class="price">8.50</span>
+                                </td>
+                                <td><span class="qty">Qty</span><br>
+                                    <select name="S001" class="selectitem">
+                                        <option value="0" selected>None</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col mains">
+                    <h1>Mains</h1>
+                    <div class="fooditem">
+                        <table>
+                            <tr>
+                                <td><img src="images/burger.jpg" alt="Special Burger Photo"></td>
+                                <td><span class="itemname">Special Burger</span><br>
+                                    $<span class="price">18.00</span>
+                                </td>
+                                <td><span class="qty">Qty</span><br>
+                                    <select name="M001" class="selectitem">
+                                        <option value="0" selected>None</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col drinks">
+                    <h1>Drinks</h1>
+                    <div class="fooditem">
+                        <table>
+                            <tr>
+                                <td><img src="images/engbftea.jpg" alt="English Breakfast Tea Photo"></td>
+                                <td>
+                                    <span class="itemname">English Breakfast Tea</span><br>
+                                    $<span class="price">4.50</span>
+                                </td>
+                                <td><span class="qty">Qty</span><br>
+                                    <select name="D001" class="selectitem">
+                                        <option value="0" selected>None</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col totalinfo">
+                    <h1>Total Order Information</h1>
+                    <div id="itemised">
+                        
+                        
+                    </div>
+                    <div id="weather">
+                    </div>
+                    <input id="submit_button" class="button" type="submit" value="Submit Order">
+
+                </div>
+            </div>
+        </form>
+    </section>
+    
+
+    <footer>
+        <hr>
+        &copy; Makando Bistro Pte Ltd. All rights reserved.
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/weather.js"></script>
+
+</body>
+
+</html>

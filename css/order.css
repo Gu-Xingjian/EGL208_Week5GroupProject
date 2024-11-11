@@ -1,0 +1,89 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.col {    
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.itemtable {
+    padding:10px;   
+    font-size: small;    
+    line-height: 2;
+    min-width: 90%;
+    margin:0 auto;    
+}
+
+.totalamt {
+    font-weight: bolder;
+}
+
+th {
+    font-weight: bolder;
+}
+
+tr {
+   padding:5px; 
+}
+
+.fooditem {
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+.fooditem table {      
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fooditem img {
+    width: 100px;
+    height: 100px;
+}
+
+.fooditem td:first-child {
+    padding: 5px;
+    width: 100px;
+}
+
+.fooditem td:last-child {
+    padding: 5px;
+    width: 100px;
+}
+
+.itemname, .qty {
+    font-weight: bolder;
+}
+
+.price {
+    line-height: 2;
+    text-align: center;
+}
+
+
+option {
+    text-align: center;
+}
+
+#weather {
+    font-size: 0.7rem;
+    color: #a01548;
+    }
+    
+@media screen and (min-width:768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .grid-container {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
