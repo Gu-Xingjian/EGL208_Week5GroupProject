@@ -1,7 +1,10 @@
-Overview
+**Overview**
+
+
 This project is a PHP-based web application that includes multiple pages such as home, about, contact, and login, with styling (CSS), JavaScript functionality, and images. This README will guide you through setting up the project on a WAMP server and accessing it via localhost.
 
-Prerequisites
+**Prerequisites**
+
 WAMP Server - Download and install WAMP from WAMP Server's official website.
 Basic PHP and MySQL knowledge (optional, but helpful).
 Installation Instructions
