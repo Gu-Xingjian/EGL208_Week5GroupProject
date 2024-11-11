@@ -3,40 +3,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submitted</title>
-    <link rel="stylesheet" href="css/css_reset.css">
-    <link rel="stylesheet" href="css/global.css">
+    <h1>food added</h1>
 </head>
 <body>
- <?php include_once("header.php");?>
     <section id="main">
-       <h1>Order Submitted</h1>
        <?php
-       
        require_once("dbinfo.php");
-       $mysqli = new mysqli($hostname,$dbUser,$dbPassword,$db);
+       $mysqli = new mysqli($Name,$Price,$stock);
        //check connection
       
        if ($mysqli -> connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
         exit();
         }
-    $date = date('Y-m-d');
-    $userid = $_SESSION['userID'];
-    $sqlstatement = "INSERT INTO `orders`(`userFK`, `orderDate`) VALUES ('".$userid."','".$date."');";
+
+    $Name = $_Post['Name'];
+    $Price = $_Post['Price'];
+    $stock = $_Post['Quantity'];
+    
+    $sqlstatement = "INSERT INTO `products`(`Name`, `Price`, `Stock`) VALUES ('$Name','$Price','$stock');";
       $mysqli->query($sqlstatement);
       $orderFK = $mysqli->insert_id;
-  
-foreach($_POST as $itemFK => $qty) {
-    if ($qty > 0)   {
-      
-       $sqlstatement = "INSERT INTO orderitems ( orderFK, menuItemFK, itemQty) VALUES ('" .$orderFK."','" . $itemFK."' ,'" .$qty."')";
-       $mysqli->query($sqlstatement);
-        echo "<p>ItemID $itemFK with quantity $qty</p>";
-    }
-}
 $mysqli->close();
 ?>

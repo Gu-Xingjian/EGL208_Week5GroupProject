@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 11, 2024 at 08:24 AM
+-- Generation Time: Nov 11, 2024 at 09:22 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
   `Name` varchar(125) NOT NULL,
   `Price` double NOT NULL,
-  `Stock` int NOT NULL,
+  `Stock` int NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
 
